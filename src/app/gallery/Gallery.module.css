@@ -1,0 +1,267 @@
+/* Gallery page */
+.page {
+  min-height: 100vh;
+  padding-bottom: 5rem;
+}
+
+/* ── Header ── */
+.header {
+  padding: clamp(3rem, 6vw, 5rem) 0 2rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin-top: 0.75rem;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+/* Search */
+.searchWrap {
+  position: relative;
+  max-width: 460px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.searchInput {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  padding: 0.6875rem 2.75rem 0.6875rem 2.75rem;
+  width: 100%;
+  outline: none;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+
+.searchInput:focus {
+  border-color: var(--color-gold-dim);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-dim);
+}
+
+.searchClear {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: color var(--dur-fast) var(--ease);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchClear:hover {
+  color: var(--color-text);
+}
+
+/* Category filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4375rem 1rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+
+.filterBtn:hover {
+  border-color: var(--color-gold-dim);
+  color: var(--color-gold);
+}
+
+.filterActive {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000 !important;
+  font-weight: 500;
+}
+
+/* Tag row */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+/* ── Grid ── */
+.gridWrap {
+  padding-top: 1rem;
+}
+
+/* Hover caption on gallery images */
+.cardOverlayInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.cardTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.cardYear {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Result count */
+.resultCount {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-dim);
+  margin-top: 2.5rem;
+  letter-spacing: 0.04em;
+}
+
+/* Empty state */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  font-size: 0.9375rem;
+  color: var(--color-text-dim);
+}
+
+/* ── Painting details panel (inside expanded view) ── */
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 2rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-lg);
+  box-shadow: 0 24px 60px -24px rgba(120, 53, 15, 0.35);
+  cursor: default;
+}
+
+.details > :global(.tag) {
+  align-self: flex-start;
+}
+
+.detailsTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-top: 0.5rem;
+}
+
+.detailsMeta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-family: 'Inter', sans-serif;
+}
+
+.detailsDesc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.detailsTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.875rem 1rem;
+  background: var(--color-surface-2);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--color-border-soft);
+}
+
+.priceLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-family: 'Inter', sans-serif;
+}
+
+.priceValue {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.375rem;
+  color: var(--color-gold);
+  font-weight: 500;
+}
