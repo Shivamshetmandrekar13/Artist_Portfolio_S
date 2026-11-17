@@ -26,19 +26,19 @@ export default function AboutPage() {
         I paint what the light leaves behind.
       </ExpandHeading>
 
-      <div className="mt-6 max-w-3xl space-y-4 text-[clamp(0.95rem,1.4vw,1.125rem)] leading-relaxed text-white/85">
+      <div className="mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-3xl space-y-4 text-[clamp(0.95rem,1.4vw,1.125rem)] leading-relaxed text-white/85">
         <p>
           I grew up in Mumbai, between the sea and the monsoon, and I have spent more than twelve years
           trying to hold on to the moments that pass too quickly. A wet window. A street just before it
           wakes. The gold of late afternoon on an old wall.
         </p>
-        <p className="hidden sm:block">
+        <p className="hidden [@media(min-width:640px)_and_(min-height:761px)]:block">
           I work mostly in oil and mixed media from my studio in Bandra. I build each canvas slowly, layer
           over layer, until it feels less like a picture and more like a memory you can stand inside.
         </p>
       </div>
 
-      <dl className="mt-10 grid w-full max-w-3xl grid-cols-3 gap-4 border-t border-white/20 pt-6">
+      <dl className="mt-[clamp(1rem,4vh,2.5rem)] grid w-full max-w-3xl grid-cols-3 gap-4 border-t border-white/20 pt-[clamp(0.75rem,2.5vh,1.5rem)]">
         {FACTS.map(({ value, label }) => (
           <div key={label} className="flex flex-col items-center gap-1">
             <dt className="order-2 text-[0.65rem] uppercase tracking-[0.2em] text-white/60">{label}</dt>
@@ -49,7 +49,7 @@ export default function AboutPage() {
         ))}
       </dl>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-4">
+      <div className="mt-[clamp(1rem,4vh,2.5rem)] flex flex-wrap justify-center gap-4">
         <Link href="/gallery" className="btn btn-primary">
           View the Collection
         </Link>

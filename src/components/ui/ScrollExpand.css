@@ -62,9 +62,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* `safe` keeps the top edge reachable if content is ever taller than the stage. */
+  justify-content: safe center;
   text-align: center;
-  padding: 6%;
+  /* Vertical padding from viewport height (percentages resolve against width,
+     which ate most of the height on wide screens and clipped the bottom). */
+  padding: clamp(0.75rem, 3vh, 2.5rem) 6%;
   opacity: 0;
   will-change: opacity, transform;
 }

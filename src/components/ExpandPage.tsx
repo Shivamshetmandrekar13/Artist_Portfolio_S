@@ -59,7 +59,7 @@ export function ExpandHeading({ eyebrow, children }: { eyebrow: string; children
     <>
       <p className="text-[0.7rem] font-medium uppercase tracking-[0.3em] text-white/70">{eyebrow}</p>
       <h1
-        className="mt-4 text-[clamp(2.25rem,5.5vw,4.25rem)] font-light leading-[1.05]"
+        className="mt-[clamp(0.5rem,1.5vh,1rem)] text-[clamp(2rem,min(5.5vw,7vh),4.25rem)] font-light leading-[1.05]"
         style={{ fontFamily: SERIF }}
       >
         {children}

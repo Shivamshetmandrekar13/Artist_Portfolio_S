@@ -39,24 +39,24 @@ export default function ServicesPage() {
         Art, made with you in mind.
       </ExpandHeading>
 
-      <p className="mt-6 max-w-2xl text-[clamp(0.95rem,1.4vw,1.125rem)] leading-relaxed text-white/85">
+      <p className="mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-2xl text-[clamp(0.95rem,1.4vw,1.125rem)] leading-relaxed text-white/85">
         Whether you want a painting for a single wall or a whole collection, every project starts with a
         conversation about the light, the room and the feeling you want to live with.
       </p>
 
-      <ul className="mt-10 grid w-full grid-cols-2 gap-px overflow-hidden rounded-[var(--r-lg)] border border-white/20 bg-white/20 text-left lg:grid-cols-4">
+      <ul className="mt-[clamp(1rem,4vh,2.5rem)] grid w-full grid-cols-2 gap-px overflow-hidden rounded-[var(--r-lg)] border border-white/20 bg-white/20 text-left lg:grid-cols-4">
         {SERVICES.map(({ title, body }, i) => (
-          <li key={title} className="flex flex-col gap-2 bg-black/30 p-4 backdrop-blur-sm sm:p-6">
+          <li key={title} className="flex flex-col gap-2 bg-black/30 p-4 backdrop-blur-sm sm:p-[clamp(1rem,2.5vh,1.5rem)]">
             <span className="text-[0.65rem] tracking-[0.2em] text-white/50">0{i + 1}</span>
             <h2 className="text-[clamp(1.1rem,1.8vw,1.4rem)] font-light leading-tight" style={{ fontFamily: SERIF }}>
               {title}
             </h2>
-            <p className="hidden text-sm leading-relaxed text-white/75 sm:block">{body}</p>
+            <p className="hidden text-sm leading-relaxed text-white/75 [@media(min-width:640px)_and_(min-height:761px)]:block">{body}</p>
           </li>
         ))}
       </ul>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-4">
+      <div className="mt-[clamp(1rem,4vh,2.5rem)] flex flex-wrap justify-center gap-4">
         <Link href="/contact" className="btn btn-primary">
           Start a Commission
         </Link>
