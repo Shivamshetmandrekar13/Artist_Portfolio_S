@@ -63,7 +63,7 @@ export default function Recognition() {
         {/* Heading */}
         <div className="grid gap-8 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
-            <SectionHeader index="05" label="Awards & Recognition" />
+            <SectionHeader label="Awards & Recognition" />
             <h2 className="mt-8 text-[clamp(2.5rem,6vw,4.75rem)] font-light leading-[1]">
               A decade of <em className="text-[var(--color-gold)]">recognition</em>
             </h2>

@@ -36,7 +36,7 @@ export default function CallToAction() {
         />
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-          <SectionHeader index="06" label="Work Together" />
+          <SectionHeader label="Work Together" />
 
           <span className="mt-10 inline-flex items-center gap-2.5 rounded-full border border-[rgba(200,169,110,0.25)] bg-[rgba(200,169,110,0.08)] px-4 py-1.5 text-[0.6875rem] uppercase tracking-[0.18em] text-[var(--color-gold)]">
             <span className="relative flex size-2">

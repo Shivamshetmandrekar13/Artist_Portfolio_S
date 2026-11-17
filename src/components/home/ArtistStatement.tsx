@@ -55,7 +55,7 @@ export default function ArtistStatement() {
 
   return (
     <div className="container">
-      <SectionHeader index="04" label="Artist Statement" />
+      <SectionHeader label="Artist Statement" />
 
       <blockquote
         ref={quoteRef}
